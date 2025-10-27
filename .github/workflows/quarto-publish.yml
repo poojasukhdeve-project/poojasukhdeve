@@ -1,14 +1,51 @@
 name: Publish Quarto site
+
 on:
-  push: { branches: [ main ] }
+  push:
+    branches: [ main ]
   workflow_dispatch:
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    permissions: { contents: write, pages: write, id-token: write }
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: quarto-dev/quarto-actions/setup@v2
-      - uses: quarto-dev/quarto-actions/render@v2
-      - uses: quarto-dev/quarto-actions/publish@v2
-        with: { target: gh-pages }
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # If you use Python code blocks in .qmd files
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps (if requirements.txt present)
+        if: hashFiles('requirements.txt') != ''
+        run: pip install -r requirements.txt
+
+      - name: Install Poetry deps (optional)
+        if: hashFiles('pyproject.toml') != '' && hashFiles('poetry.lock') != ''
+        run: |
+          pip install poetry
+          poetry install --no-root
+
+      # If you use R, add a setup step here (we can provide it if needed)
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 'latest'
+
+      - name: Render
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          path: .
+
+      - name: Publish to gh-pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
