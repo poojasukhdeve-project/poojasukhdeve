@@ -2,8 +2,13 @@ project:
   type: website
   output-dir: _site
 
+execute:
+  freeze: auto     # cache results
+  enabled: false   # don’t try to run Python/R code in Actions
+
 website:
   title: "Pooja Sukhdeve"
+  site-url: "https://poojasukhdeve.github.io/"   # or .../poojasukhdeve-project/
   navbar:
     right:
       - text: "About"
@@ -16,11 +21,8 @@ website:
         href: index.qmd#services
       - text: "Contact"
         href: index.qmd#contact
+
 format:
   html:
-    theme: cosmo # or another simple Bootstrap theme
-    css: styles.css # Add your custom styles if needed
-
-
-
-
+    theme: cosmo
+    css: styles.css
