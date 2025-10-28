@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "&lt;h2&gt;Pooja S Sukhdeve&lt;/h2&gt;\n&lt;p&gt;\n  Hi, I’m Pooja, a Computer Science graduate student at Boston University MET, specializing in data science and AI. I’m passionate about analytics, innovative tech, and making a real-world impact through software and research projects.\n&lt;/p&gt;\n&lt;ul&gt;\n  &lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; poojasukhdeve@email.com&lt;/li&gt;\n  &lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=\"https://linkedin.com/in/poojasukhdeve\" target=\"_blank\"&gt;View my profile&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Pooja Sukhdeve",
@@ -12,13 +19,6 @@
     "title": "Pooja Sukhdeve",
     "section": "",
     "text": "Leveraged machine learning (Random Forest, Gradient Boosting) to analyze exoplanet datasets. Achieved 75% model accuracy and used SHAP for interpretable AI, revealing the key features behind exoplanet detection.\nImpact: Balanced accuracy with interpretability to support scientific discovery.\n\n\nFigure 1: GMM Clustering of Exoplanets\n\n\n\nFigure 2: Feature Importance in Random Forest Classifier\n\n  Python    Jupyter    Pandas    scikit-learn    SHAP \n View code on GitHub \n\n\n\n\nAnalyzed BRFSS data to predict disease risk and optimize health insurance strategies (best accuracy: 84.3%). Used SHAP values for model transparency.\nImpact: Provided actionable health risk insights to support healthcare decision-making.\n  R  dplyr ggplot2 caret   SHAP \n View code on GitHub \n\n\n\n\nBuilt a Tableau dashboard visualizing Netflix’s global content, genre trends, and maturity ratings.\n\n\nFigure: Netflix Data Visualization Dashboard\n\n  Tableau    Python    Pandas \n View dashboard on GitHub \n\n\n\n\n\n\nFigure: Home interaction page\n\n\n\nFigure: Skills interaction page\n\n\n\n\n\nDeveloped an interactive visualization tool to help visually impaired users understand data structures like lists and sets in Python.\nImpact: Advanced accessibility in programming education.\n  Python    Jupyter    HTML \n View code on GitHub \n\n\n\n\n\nProgramming Languages: Python, R, SQL, JavaScript, TypeScript, HTML5, CSS, Java, PHP\n\n\nWeb Development: Node.js, React, Angular, jQuery, Bootstrap, API Integration, Git, Responsive Design\n\n\nData Visualization & Analytics: Tableau, Power BI, Matplotlib, Seaborn, Pandas, NumPy, SHAP, Excel\n\n\nData Engineering & Tools: OpenCV, Spark Apache, AWS\n\n\nOther Tools: GitHub, Outlook, R Studio, Jupyter, SQLite\n\n\n\n\n\n\n\nInterested in collaborating or want to connect? Feel free to reach out by email or connect on LinkedIn!\n\n\n\n poojasukhdeve06@gmail.com\n\n\n My GitHub\n\n\n My LinkedIn"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "&lt;h2&gt;Pooja S Sukhdeve&lt;/h2&gt;\n&lt;p&gt;\n  Hi, I’m Pooja, a Computer Science graduate student at Boston University MET, specializing in data science and AI. I’m passionate about analytics, innovative tech, and making a real-world impact through software and research projects.\n&lt;/p&gt;\n&lt;ul&gt;\n  &lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; poojasukhdeve@email.com&lt;/li&gt;\n  &lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=\"https://linkedin.com/in/poojasukhdeve\" target=\"_blank\"&gt;View my profile&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
   },
   {
     "objectID": "contact.html",
