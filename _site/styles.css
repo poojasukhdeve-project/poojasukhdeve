@@ -1,1 +1,24 @@
-/* css styles */
+/* Make the page full width and left-aligned */
+.page-content,
+.quarto-container,
+.quarto-content {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 2rem !important;  /* adjust to control left padding */
+}
+
+/* If the theme wraps the content in a centered card, remove card constraints */
+.container,
+.card,
+.main-card {
+    max-width: 100% !important;
+    box-shadow: none !important;    /* remove card shadow if present */
+    background: transparent !important;
+}
+
+/* Make navbar span the full width */
+.navbar,
+.navbar-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+}

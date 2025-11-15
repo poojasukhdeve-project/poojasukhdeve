@@ -3,12 +3,12 @@ project:
   output-dir: _site
 
 execute:
-  freeze: auto     # cache results
-  enabled: false   # don’t try to run Python/R code in Actions
+  freeze: auto
+  enabled: false
 
 website:
   title: "Pooja Sukhdeve"
-  site-url: "https://poojasukhdeve.github.io/"   # or .../poojasukhdeve-project/
+  site-url: "https://poojasukhdeve.github.io/"
   navbar:
     right:
       - text: "About"
@@ -26,3 +26,4 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    page-layout: full
