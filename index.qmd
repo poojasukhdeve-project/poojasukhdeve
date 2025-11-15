@@ -1,276 +1,308 @@
 ---
-title: " "
-format: html
+title: ""
+format:
+  html:
+    theme: cosmo
+    toc: false
+    css: styles.css
 ---
 
 <style>
+
+/* ---------- MAIN CONTAINER ---------- */
 .site-container {
-  max-width: 3500px;
-  margin: 2.5rem auto 1rem auto;
-  padding: 1.5rem 2vw 3rem 2vw;
+  max-width: 1600px;
+  margin: 2rem auto;
+  padding: 2rem 2rem;
   background: #fff;
-  border-radius: 1.6rem;
-  box-shadow: 0 8px 32px #0001;
 }
+
+/* ---------- SECTION TITLE ---------- */
 .section-title {
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-top: 1.8rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.2rem;
   color: #1c2541;
 }
-.section-block { margin-bottom: 2.7rem; }
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 2.1rem;
-  margin-top: 0.7rem;
+
+.section-block {
+  margin-bottom: 3rem;
 }
-.project-card {
+
+/* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1.5;
+  font-size: 1.1rem;
+}
+
+.about-img img {
+  width: 380px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 14px #0002;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-img img {
+    width: 100%;
+  }
+}
+
+/* -------------- SERVICES CARDS -------------- */
+.card-group {
+  display: flex;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
   background: #f6f9fb;
-  border-radius: 1.2rem;
-  padding: 1.2rem 1rem 1.2rem 1rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
   box-shadow: 0 4px 16px #0001;
-  display: flex; flex-direction: column; gap: 0.7rem;
 }
+
+/* Projects images */
 .project-img {
-  width: 100%; max-height: 140px; object-fit: cover;
-  border-radius: 0.8rem; margin-bottom: 0.7rem; border: 1.5px solid #e3e6eb;
+  width: 65%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  border-radius: 12px;
 }
-.project-title { font-size: 1.23rem; font-weight: 600; color: #304878; margin-bottom: 0.1em; }
-.project-desc { color: #333; font-size: 1.06rem; }
-.project-impact {
-  font-size: 0.97rem; color: #556; background: #e4eaff;
-  padding: 0.36em 0.8em; border-radius: 0.7em; margin-top: 0.2em; display: inline-block;
+
+/* ---------- SKILLS ---------- */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
 }
-.skills-list, .strengths-list, .contact-list { list-style: none; padding-left: 0; }
-.skills-list li, .strengths-list li { margin-bottom: 0.3em; padding-left: 1.5em; position: relative; }
-.skills-list li:before, .strengths-list li:before {
-  content: "✔️"; position: absolute; left: 0; color: #64b6ac; font-size: 0.98em;
+
+.skills-list li {
+  margin-bottom: 0.4em;
+  padding-left: 1.5em;
+  position: relative;
+  font-size: 1.05rem;
 }
-.skill-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
-.skill { background-color: #0f172a; color: #fff; border-radius: 8px; padding: 8px 12px; display: flex; align-items: center; gap: 8px; font-size: 0.95em; font-weight: 500; }
-.skill img { height: 20px; width: 20px; }
-@media (max-width: 750px) {
-  .site-container { padding: 1.2rem 2vw 1.5rem 2vw; }
-  .projects-grid { grid-template-columns: 1fr; }
+
+.skills-list li:before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
 }
+
+/* ---------- CONTACT ---------- */
+.contact-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.15rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .contact-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 </style>
+
+
 
 <div class="site-container">
 
-<!-- ABOUT -->
+
+
+<!-- ======================= ABOUT SECTION ======================= -->
 <div class="section-block" id="about">
-  <h2 class="section-title">About Me</h2>
-  <h3 style="font-size:1.2rem; color:#304878; margin-top:0.4em;">Pooja S Sukhdeve</h3>
-  <p style="font-size:1.2rem; color:#304878; margin-top:0.4em;">
-    Computer Science Graduate Student · Data Analyst · Web Developer
-  </p>
-  <img src="Images/5.png" alt="Pooja S Sukhdeve"
-       style="display:block; margin:0 auto; width:100%; max-width:600px; height:auto;">
-  <p>
-    Hi, I’m a passionate Computer Science graduate student at Boston University, with 5+ years of hands-on
-    experience in software development, web development, and data analytics. I specialize in building scalable,
-    accessible, and user-centric solutions. I’m proficient in Python, R, SQL, JavaScript, and I’m skilled at transforming
-    complex data into actionable insights using tools like Tableau and SHAP.
-  </p>
-  <p>
-    My journey includes developing accessible learning modules for visually impaired users, leading award-winning
-    hackathon teams, and contributing to both academic research and innovative industry projects.
-  </p>
+
+<div class="about-container">
+
+  <div class="about-text">
+
+  # About Me
+
+  ### **Pooja S Sukhdeve**
+  **Computer Science Graduate Student · Data Analyst · Web Developer**
+
+  Hi, I’m a passionate Computer Science graduate student at Boston University, with 5+ years of hands-on
+  experience in software development, web development, and data analytics. I specialize in building scalable,
+  accessible, and user-centric solutions. I’m proficient in Python, R, SQL, JavaScript, and I’m skilled at
+  transforming complex data into actionable insights using tools like Tableau and SHAP.
+
+  My journey includes developing accessible learning modules for visually impaired users, leading award-winning
+  hackathon teams, and contributing to both academic research and innovative industry projects.
+
+  </div>
+
+  <div class="about-img">
+    <img src="Images/5.png" alt="Pooja Sukhdeve">
+  </div>
+
+</div>
 </div>
 
+
+
+
+<!-- ======================= SERVICES SECTION ======================= -->
 # Services
 
 ::: {.card-group}
+
 ::: {.card}
 ![](Images/1.png){.card-img-top style="height:90px;width:90px;object-fit:cover;border-radius:50%;margin:auto;margin-top:18px;box-shadow:0 2px 12px #0001;display:block;background:#f7f7fa;"}
+
 <div style="text-align:center; font-weight:bold; font-size:1.1rem; margin-top:0.6em;">
   Data Analytics & Visualization
 </div>
-Unlock actionable insights from complex data.
 
-- Data wrangling & cleaning
-- Predictive modeling
-- Dashboards & visualization
+Unlock actionable insights from complex data.
+- Data wrangling & cleaning  
+- Predictive modeling  
+- Dashboards & visualization  
+
 :::
 
 ::: {.card}
 ![](Images/3.png){.card-img-top style="height:90px;width:90px;object-fit:cover;border-radius:50%;margin:auto;margin-top:18px;box-shadow:0 2px 12px #0001;display:block;background:#f7f7fa;"}
+
 <div style="text-align:center; font-weight:bold; font-size:1.1rem; margin-top:0.6em;">
   Software & Web Development
 </div>
-Robust web frontend & backend solutions
 
-- Full-stack dev
-- Responsive UI/UX
-- API integration
+Robust web frontend & backend solutions.
+- Full-stack dev  
+- Responsive UI/UX  
+- API integration  
+
 :::
 
 ::: {.card}
 ![](Images/4.png){.card-img-top style="height:90px;width:90px;object-fit:cover;border-radius:50%;margin:auto;margin-top:18px;box-shadow:0 2px 12px #0001;display:block;background:#f7f7fa;"}
+
 <div style="text-align:center; font-weight:bold; font-size:1.1rem; margin-top:0.6em;">
   Application Development
 </div>
-Delivering innovative and cutting-edge application development
 
-- Testing & Quality Assurance
-- Deployment & Maintenance
-- Design & Architecture
+Delivering innovative and cutting-edge applications.
+- Testing & QA  
+- Deployment & Maintenance  
+- System Architecture  
+
 :::
 :::
 
-<!-- PROJECTS -->
-## Selected projects in Data Analytics, and Machine Learning
 
-### Exoplanet Data Analysis with SHAP
-Leveraged machine learning (Random Forest, Gradient Boosting) to analyze exoplanet datasets. Achieved 75% model accuracy and used SHAP for interpretable AI, revealing the key features behind exoplanet detection.  
-**Impact:** Balanced accuracy with interpretability to support scientific discovery.
 
-<img src="Images/7.png" alt="GMM Clustering of Exoplanets"
-     style="width:65%; max-width:800px; height:auto; display:block; margin: 10px 0;">
-<figcaption style="font-weight:600; font-size:0.95rem; margin-top:8px; text-align:left;">
-  <strong>Figure 1:</strong> GMM Clustering of Exoplanets
-</figcaption>
+<!-- ======================= PROJECTS SECTION ======================= -->
+# Selected Projects in Data Analytics & Machine Learning
 
-<img src="Images/8.png" alt="Feature Importance in Random Forest"
-     style="width:65%; max-width:800px; height:auto; display:block; margin: 10px 0;">
-<figcaption style="font-weight:600; font-size:0.95rem; margin-top:8px; text-align:left;">
-  <strong>Figure 2:</strong> Feature Importance in Random Forest Classifier
-</figcaption>
+## Exoplanet Data Analysis with SHAP
+Leveraged ML models (Random Forest, Gradient Boosting) to analyze exoplanet datasets with 75% accuracy.  
+**Impact:** Used SHAP to identify key features driving exoplanet detection.
 
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> Python
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> Jupyter
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> Pandas
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikit-learn/scikit-learn-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> scikit-learn
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://avatars.githubusercontent.com/u/37232445?s=200&v=4" style="height:1em;vertical-align:middle;margin-right:6px;"> SHAP
-</span>
+<img src="Images/7.png" class="project-img">
+<img src="Images/8.png" class="project-img">
 
-<a href="https://github.com/poojasukhdeve-project/Exoplanet-Data-Visualization-and-Analysis-with-SHAP.git" target="_blank" style="display:block; margin-top:10px; font-weight:500; color:#3366cc;">
-  View code on GitHub
-</a>
+[View Code on GitHub](https://github.com/poojasukhdeve-project/Exoplanet-Data-Visualization-and-Analysis-with-SHAP.git)
+
+
 
 ---
 
-### BRFSS Health Data Analytics
-Analyzed BRFSS data to predict disease risk and optimize health insurance strategies (best accuracy: 84.3%). Used SHAP values for model transparency.  
-**Impact:** Provided actionable health risk insights to support healthcare decision-making.
+## BRFSS Health Data Analytics
+Analyzed BRFSS data to predict disease risk with 84.3% accuracy using SHAP.
 
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> R
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">dplyr</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">ggplot2</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">caret</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://avatars.githubusercontent.com/u/37232445?s=200&v=4" style="height:1em;vertical-align:middle;margin-right:6px;"> SHAP
-</span>
+[View Code on GitHub](https://github.com/poojasukhdeve-project/BRFSS-Data-Analytics-Exploring-Health-Patterns-and-Risk-Factors-with-R.git)
 
-<a href="https://github.com/poojasukhdeve-project/BRFSS-Data-Analytics-Exploring-Health-Patterns-and-Risk-Factors-with-R.git" target="_blank" style="display:block; margin-top:10px; font-weight:500; color:#3366cc;">
-  View code on GitHub
-</a>
+
 
 ---
 
-### Netflix Data Visualization Dashboard
-Built a Tableau dashboard visualizing Netflix’s global content, genre trends, and maturity ratings.
+## Netflix Data Visualization Dashboard
 
-<img src="Images/6.png" alt="Netflix Data Visualization Dashboard"
-     style="width:65%; max-width:800px; height:auto; display:block; margin: 10px 0;">
-<figcaption style="font-weight:600; font-size:0.95rem; margin-top:8px; text-align:left;">
-  <strong>Figure:</strong> Netflix Data Visualization Dashboard
-</figcaption>
+<img src="Images/6.png" class="project-img">
 
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tableau/tableau-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> Tableau
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> Python
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> Pandas
-</span>
+[View dashboard on GitHub](https://github.com/poojasukhdeve-project/Netflix-Data-Visualization-Dashboard-using-Tableau.git)
 
-<a href="https://github.com/poojasukhdeve-project/Netflix-Data-Visualization-Dashboard-using-Tableau.git" target="_blank" style="display:block; margin-top:10px; font-weight:500; color:#3366cc;">
-  View dashboard on GitHub
-</a>
+
 
 ---
 
-### Space Theme Website Portfolio
-<img src="Images/9.png" alt="Home interaction page"
-     style="width:65%; max-width:800px; height:auto; display:block; margin: 10px 0;">
-<figcaption style="font-weight:600; font-size:0.95rem; margin-top:8px; text-align:left;">
-  <strong>Figure:</strong> Home interaction page
-</figcaption>
+## Space Theme Website Portfolio
 
-<img src="Images/10.png" alt="Skills interaction page"
-     style="width:65%; max-width:800px; height:auto; display:block; margin: 10px 0;">
-<figcaption style="font-weight:600; font-size:0.95rem; margin-top:8px; text-align:left;">
-  <strong>Figure:</strong> Skills interaction page
-</figcaption>
+<img src="Images/9.png" class="project-img">
+<img src="Images/10.png" class="project-img">
+
+
 
 ---
 
-### Visualization Module for Python (Research Project)
-Developed an interactive visualization tool to help visually impaired users understand data structures like lists and sets in Python.  
-**Impact:** Advanced accessibility in programming education.
+## Visualization Module for Python (Research Project)
+Interactive tool to teach programming to visually impaired learners.  
+[View Code on GitHub](https://github.com/poojasukhdeve-project/Python-Visualizations-Book-Interactive-Module.git)
 
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> Python
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> Jupyter
-</span>
-<span style="display:inline-block; margin:0 6px 6px 0; padding:3px 12px; background:#f5f5f5; border-radius:8px; font-size:1.05em;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" style="height:1em;vertical-align:middle;margin-right:6px;"> HTML
-</span>
 
-<a href="https://github.com/poojasukhdeve-project/Python-Visualizations-Book-Interactive-Module.git" target="_blank" style="display:block; margin-top:10px; font-weight:500; color:#3366cc;">
-  View code on GitHub
-</a>
 
-<!-- SKILLS -->
+
+<!-- ======================= SKILLS ======================= -->
 <div class="section-block" id="skills">
-  <h2 class="section-title">Technical Skills</h2>
-  <ul class="skills-list">
-    <li><b>Programming Languages:</b> Python, R, SQL, JavaScript, TypeScript, HTML5, CSS, Java, PHP</li>
-    <li><b>Web Development:</b> Node.js, React, Angular, jQuery, Bootstrap, API Integration, Git, Responsive Design</li>
-    <li><b>Data Visualization & Analytics:</b> Tableau, Power BI, Matplotlib, Seaborn, Pandas, NumPy, SHAP, Excel</li>
-    <li><b>Data Engineering & Tools:</b> OpenCV, Spark Apache, AWS</li>
-    <li><b>Other Tools:</b> GitHub, Outlook, R Studio, Jupyter, SQLite</li>
-  </ul>
+# Technical Skills
+
+<ul class="skills-list">
+  <li><b>Programming Languages:</b> Python, R, SQL, JavaScript, TypeScript, HTML5, CSS, Java, PHP</li>
+  <li><b>Web Development:</b> Node.js, React, Angular, jQuery, Bootstrap, API Integration, Git</li>
+  <li><b>Data Visualization:</b> Tableau, Power BI, Matplotlib, Seaborn, Pandas, NumPy, SHAP, Excel</li>
+  <li><b>Data Engineering:</b> OpenCV, Spark Apache, AWS</li>
+  <li><b>Other Tools:</b> GitHub, Outlook, R Studio, Jupyter, SQLite</li>
+</ul>
 </div>
 
-<!-- CONTACT -->
+
+
+
+<!-- ======================= CONTACT ======================= -->
 <div class="section-block" id="contact">
-  <h2 class="section-title">Contact Me</h2>
-  <p>Interested in collaborating or want to connect?<br>
-     Feel free to reach out by email or connect on LinkedIn!</p>
+# Contact Me
 
-  <ul class="contact-list" style="display:flex; justify-content:space-between; align-items:center; list-style:none; padding:0; font-size:1.12em; color:#294; margin-top:20px;">
-    <li style="display:flex; align-items:center; gap:8px;">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2709.svg" alt="Email" style="height:1.5em;">
-      <a href="mailto:poojasukhdeve06@gmail.com">poojasukhdeve06@gmail.com</a>
-    </li>
-    <li style="display:flex; align-items:center; gap:8px;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="height:1.5em;">
-      <a href="https://github.com/poojasukhdeve-project" target="_blank">My GitHub</a>
-    </li>
-    <li style="display:flex; align-items:center; gap:8px;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="height:1.5em;">
-      <a href="https://www.linkedin.com/in/pooja-sukhdeve-79b897194/" target="_blank">My LinkedIn</a>
-    </li>
-  </ul>
+<p>Feel free to reach out or connect on social media!</p>
+
+<ul class="contact-list">
+  <li><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2709.svg" style="height:1.3em;">  
+      <a href="mailto:poojasukhdeve06@gmail.com">poojasukhdeve06@gmail.com</a></li>
+
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="height:1.3em;">  
+      <a href="https://github.com/poojasukhdeve-project" target="_blank">GitHub</a></li>
+
+  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="height:1.3em;">  
+      <a href="https://www.linkedin.com/in/pooja-sukhdeve-79b897194/" target="_blank">LinkedIn</a></li>
+</ul>
 </div>
 
-</div> <!-- /site-container -->
+
+
+</div> <!-- END SITE CONTAINER -->
