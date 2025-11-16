@@ -118,6 +118,50 @@ format:
   }
 }
 
+/* .about-video {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none !important;
+  border: none !important;
+} */
+
+ .video-wrapper {
+  position: relative;
+  width: 380px;
+  max-width: 100%;
+}
+
+.about-video {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Text overlay */
+.overlay-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  animation: fadeLoop 4s ease-in-out infinite;
+}
+
+/* Fade-in → visible → fade-out → repeat */
+@keyframes fadeLoop {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
 }
 
 /* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
@@ -250,11 +294,23 @@ format:
   hackathon teams, and contributing to both academic research and innovative industry projects.
 
   </div>
-<div class="about-img">
+<!-- <div class="about-img">
   <img src="Images/about_section.gif"
        alt="About Me GIF"
        class="about-fade">
+</div> -->
+
+<div class="about-img video-wrapper">
+  <video autoplay loop muted playsinline class="about-video">
+    <source src="Images/about.mp4" type="video/mp4">
+  </video>
+
+  <!-- TEXT overlay -->
+  <div class="overlay-text">Software Integration</div>
 </div>
+
+
+
 
 
 </div>
@@ -405,7 +461,7 @@ Interactive tool to teach programming to visually impaired learners.
 </div> <!-- END SITE CONTAINER -->
 
 
-<script>
+<!-- <script>
 document.addEventListener("DOMContentLoaded", function () {
   
   const fadeElements = document.querySelectorAll(".about-fade");
@@ -420,4 +476,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fadeElements.forEach(el => observer.observe(el));
 });
-</script>
+</script> -->
