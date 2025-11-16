@@ -92,6 +92,32 @@ format:
     width: 100%;
     border-radius: 12px;
   }
+  /* Start invisible */
+.about-fade {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  width: 380px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* When visible on screen */
+.about-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .about-fade {
+    width: 100%;
+  }
+}
+
 }
 
 /* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
@@ -224,12 +250,12 @@ format:
   hackathon teams, and contributing to both academic research and innovative industry projects.
 
   </div>
-
- <div class="about-img">
-  <img src="Images/about_section.gif" 
-       alt="About Me GIF" 
-       style="width:380px; border-radius:12px; box-shadow:0 4px 14px #0002; object-fit:cover;">
+<div class="about-img">
+  <img src="Images/about_section.gif"
+       alt="About Me GIF"
+       class="about-fade">
 </div>
+
 
 </div>
 </div>
@@ -339,8 +365,9 @@ Interactive tool to teach programming to visually impaired learners.
 
 
 <!-- ======================= SKILLS ======================= -->
+# Technical Skills 
 <div class="section-block" id="skills">
-# Technical Skills
+
 
 <ul class="skills-list">
   <li><b>Programming Languages:</b> Python, R, SQL, JavaScript, TypeScript, HTML5, CSS, Java, PHP</li>
@@ -355,8 +382,9 @@ Interactive tool to teach programming to visually impaired learners.
 
 
 <!-- ======================= CONTACT ======================= -->
-<div class="section-block" id="contact">
 # Contact Me
+<div class="section-block" id="contact">
+
 
 <p>Feel free to reach out or connect on social media!</p>
 
@@ -375,3 +403,21 @@ Interactive tool to teach programming to visually impaired learners.
 
 
 </div> <!-- END SITE CONTAINER -->
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  
+  const fadeElements = document.querySelectorAll(".about-fade");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+});
+</script>

@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Technical Skills</h1></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -211,6 +211,32 @@ ul.task-list li input[type="checkbox"] {
     width: 100%;
     border-radius: 12px;
   }
+  /* Start invisible */
+.about-fade {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  width: 380px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* When visible on screen */
+.about-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .about-fade {
+    width: 100%;
+  }
+}
+
 }
 
 /* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
@@ -325,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
 <p>My journey includes developing accessible learning modules for visually impaired users, leading award-winning hackathon teams, and contributing to both academic research and innovative industry projects.</p>
 </div>
 <div class="about-img">
-<p><img src="Images/about_section.gif" alt="About Me GIF" style="width:380px; border-radius:12px; box-shadow:0 4px 14px #0002; object-fit:cover;"></p>
+<p><img src="Images/about_section.gif" alt="About Me GIF" class="about-fade"></p>
 </div>
 </div>
 </div>
@@ -397,9 +423,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- ======================= SKILLS ======================= -->
 </section>
 </section>
-<div id="skills" class="section-block">
 <section id="technical-skills" class="level1">
-
+<h1>Technical Skills</h1>
+<div id="skills" class="section-block">
 <ul class="skills-list">
 <li>
 <b>Programming Languages:</b> Python, R, SQL, JavaScript, TypeScript, HTML5, CSS, Java, PHP
@@ -417,12 +443,12 @@ ul.task-list li input[type="checkbox"] {
 <b>Other Tools:</b> GitHub, Outlook, R Studio, Jupyter, SQLite
 </li>
 </ul>
-</section>
 </div>
 <!-- ======================= CONTACT ======================= -->
-<div id="contact" class="section-block">
+</section>
 <section id="contact-me" class="level1">
 <h1>Contact Me</h1>
+<div id="contact" class="section-block">
 <p>
 Feel free to reach out or connect on social media!
 </p>
@@ -440,8 +466,8 @@ Feel free to reach out or connect on social media!
 <a href="https://www.linkedin.com/in/pooja-sukhdeve-79b897194/" target="_blank">LinkedIn</a>
 </li>
 </ul>
-</section>
 </div>
+</section>
 </div>
 <p><!-- END SITE CONTAINER --></p>
 
