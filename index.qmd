@@ -29,9 +29,74 @@ format:
   margin-bottom: 3rem;
 }
 
+
 /* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
 
 .about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.4rem;
+}
+
+/* text column */
+.about-text {
+  flex: 1.5;
+  font-size: 1.1rem;
+  color: #24313f;
+  line-height: 1.6;
+}
+
+/* media column (image / gif / video) */
+.about-img {
+  flex: 0 0 auto;        /* fixed column for media */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* image styling: no border/shadow and responsive */
+.about-img img,
+.about-img video {
+  width: 100%;
+  max-width: 380px;      /* change this to make the media bigger/smaller */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none !important;      /* remove any shadow */
+  border: none !important;          /* remove any border */
+  background: transparent !important;
+  display: block;
+}
+
+/* Optional: ensure videos behave like images */
+.about-img video {
+  display: block;
+  outline: none;
+}
+
+/* Mobile responsive: stack columns + full width media */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-img {
+    width: 100%;
+    justify-content: center;
+  }
+  .about-img img,
+  .about-img video {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+/* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
+
+/*.about-container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -52,14 +117,15 @@ format:
 }
 
 /* Mobile responsive */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
   }
   .about-img img {
     width: 100%;
   }
-}
+}  */
+
 
 /* -------------- SERVICES CARDS -------------- */
 .card-group {
@@ -144,8 +210,9 @@ format:
   <div class="about-text">
 
   # About Me
+  
 
-  ### **Pooja S Sukhdeve**
+  ### ** Hi All, I'm Pooja Sukhdeve**
   **Computer Science Graduate Student · Data Analyst · Web Developer**
 
   Hi, I’m a passionate Computer Science graduate student at Boston University, with 5+ years of hands-on
@@ -158,9 +225,11 @@ format:
 
   </div>
 
-  <div class="about-img">
-    <img src="Images/5.png" alt="Pooja Sukhdeve">
-  </div>
+ <div class="about-img">
+  <img src="Images/about_section.gif" 
+       alt="About Me GIF" 
+       style="width:380px; border-radius:12px; box-shadow:0 4px 14px #0002; object-fit:cover;">
+</div>
 
 </div>
 </div>

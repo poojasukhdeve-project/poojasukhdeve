@@ -148,9 +148,74 @@ ul.task-list li input[type="checkbox"] {
   margin-bottom: 3rem;
 }
 
+
 /* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
 
 .about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.4rem;
+}
+
+/* text column */
+.about-text {
+  flex: 1.5;
+  font-size: 1.1rem;
+  color: #24313f;
+  line-height: 1.6;
+}
+
+/* media column (image / gif / video) */
+.about-img {
+  flex: 0 0 auto;        /* fixed column for media */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* image styling: no border/shadow and responsive */
+.about-img img,
+.about-img video {
+  width: 100%;
+  max-width: 380px;      /* change this to make the media bigger/smaller */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none !important;      /* remove any shadow */
+  border: none !important;          /* remove any border */
+  background: transparent !important;
+  display: block;
+}
+
+/* Optional: ensure videos behave like images */
+.about-img video {
+  display: block;
+  outline: none;
+}
+
+/* Mobile responsive: stack columns + full width media */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-img {
+    width: 100%;
+    justify-content: center;
+  }
+  .about-img img,
+  .about-img video {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+/* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
+
+/*.about-container {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -171,14 +236,15 @@ ul.task-list li input[type="checkbox"] {
 }
 
 /* Mobile responsive */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
   }
   .about-img img {
     width: 100%;
   }
-}
+}  */
+
 
 /* -------------- SERVICES CARDS -------------- */
 .card-group {
@@ -254,12 +320,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="about-container">
 <div class="about-text">
 <p># About Me</p>
-<p>### <strong>Pooja S Sukhdeve</strong> <strong>Computer Science Graduate Student · Data Analyst · Web Developer</strong></p>
+<p>### ** Hi All, I’m Pooja Sukhdeve<strong> </strong>Computer Science Graduate Student · Data Analyst · Web Developer**</p>
 <p>Hi, I’m a passionate Computer Science graduate student at Boston University, with 5+ years of hands-on experience in software development, web development, and data analytics. I specialize in building scalable, accessible, and user-centric solutions. I’m proficient in Python, R, SQL, JavaScript, and I’m skilled at transforming complex data into actionable insights using tools like Tableau and SHAP.</p>
 <p>My journey includes developing accessible learning modules for visually impaired users, leading award-winning hackathon teams, and contributing to both academic research and innovative industry projects.</p>
 </div>
 <div class="about-img">
-<pre><code>&lt;img src="Images/5.png" alt="Pooja Sukhdeve"&gt;</code></pre>
+<p><img src="Images/about_section.gif" alt="About Me GIF" style="width:380px; border-radius:12px; box-shadow:0 4px 14px #0002; object-fit:cover;"></p>
 </div>
 </div>
 </div>
