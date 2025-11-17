@@ -302,11 +302,9 @@ format:
 
 <div class="about-img video-wrapper">
   <video autoplay loop muted playsinline class="about-video">
-    <source src="Images/about.mp4" type="video/mp4">
+    <source src="Images/about_sec.mp4" type="video/mp4">
   </video>
 
-  <!-- TEXT overlay -->
-  <div class="overlay-text">Software Integration</div>
 </div>
 
 
