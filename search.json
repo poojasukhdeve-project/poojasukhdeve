@@ -9,37 +9,30 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Services",
+    "title": "Pooja Sukhdeve — Portfolio",
     "section": "",
-    "text": "# About Me\n### ** Hi All, I’m Pooja Sukhdeve Computer Science Graduate Student . Software Developer · Data Analyst · Web Developer** I’m a Computer Science graduate student at Boston University who loves building clean, scalable, and user-focused software. From cloud-powered applications to full-stack web tools, I enjoy turning complex ideas into fast, functional, and elegant solutions. I work across Python, JavaScript, AWS, and modern frameworks to create systems that are reliable, intuitive, and built with purpose. Above all, I’m passionate about writing code that solves real problems and delivers great experiences for real users.\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nData Analytics & Visualization\n\nUnlock actionable insights from complex data. - Data wrangling & cleaning\n- Predictive modeling\n- Dashboards & visualization\n\n\n\n\nSoftware & Web Development\n\nRobust web frontend & backend solutions. - Full-stack dev\n- Responsive UI/UX\n- API integration\n\n\n\n\nApplication Development\n\nDelivering innovative and cutting-edge applications. - Testing & QA\n- Deployment & Maintenance\n- System Architecture\n\n\n\n\n\n\n\n\nLeveraged ML models (Random Forest, Gradient Boosting) to analyze exoplanet datasets with 75% accuracy.\nImpact: Used SHAP to identify key features driving exoplanet detection.\n \nView Code on GitHub\n\n\n\n\nAnalyzed BRFSS data to predict disease risk with 84.3% accuracy using SHAP.\nView Code on GitHub\n\n\n\n\n\nView dashboard on GitHub\n\n\n\n\n \n\n\n\n\nInteractive tool to teach programming to visually impaired learners.\nView Code on GitHub\n\n\n\n\n\n\n\n\nProgramming Languages: Python, R, SQL, JavaScript, TypeScript, HTML5, CSS, Java, PHP\n\n\nWeb Development: Node.js, React, Angular, jQuery, Bootstrap, API Integration, Git\n\n\nData Visualization: Tableau, Power BI, Matplotlib, Seaborn, Pandas, NumPy, SHAP, Excel\n\n\nData Engineering: OpenCV, Spark Apache, AWS\n\n\nOther Tools: GitHub, Outlook, R Studio, Jupyter, SQLite\n\n\n\n\n\n\n\n\n\nFeel free to reach out or connect on social media!\n\n\n\n\npoojasukhdeve06@gmail.com\n\n\n\nGitHub\n\n\n\nLinkedIn"
+    "text": "&lt;h1&gt;Hey there — I’m &lt;strong&gt;Pooja Sukhdeve&lt;/strong&gt;&lt;/h1&gt;\n&lt;p class=\"lead\"&gt;Software Developer & Data Engineer — Accessible visualizations · Cloud-native apps · Full-stack solutions&lt;/p&gt;\n\nI build reliable, scalable software that turns data into useful experiences — from AWS-powered cloud systems to interactive Python tools and full-stack web apps. My work focuses on accessibility, clean architecture, and production-ready code that solves real user problems.\n\n\n  &lt;a class=\"btn-primary\" href=\"#projects\"&gt;Glance at my work&lt;/a&gt;\n  &lt;a class=\"btn-outline\" href=\"mailto:poojasukhdeve06@gmail.com\"&gt;Contact me&lt;/a&gt;\n&lt;/div&gt;\n\n\n&lt;!-- Replace with your image or avatar --&gt;\n&lt;img src=\"Images/portrait.png\" alt=\"Pooja portrait\" style=\"width:320px;max-width:100%;border-radius:12px;display:block;\"&gt;\n\n\n\n\n\n\n\nHi — I’m Pooja Sukhdeve. I’m a Master of Science in Computer Science candidate at Boston University specializing in software development, cloud computing, and data-driven engineering. I build reliable, scalable, and user-focused applications — from AWS cloud solutions and CI/CD pipelines to full-stack web platforms and accessible Python tools.\nI enjoy turning ideas into well-designed systems through clean architecture, efficient code, and thoughtful design. With experience across front-end, back-end, and data layers, I create end-to-end solutions that integrate APIs, improve performance, and deliver user impact.\nI’m available for internships, full-time roles, and research collaborations.\n\n\n&lt;!-- Example: a short looping mp4 or replace with PNG/JPG --&gt;\n&lt;video autoplay loop muted playsinline class=\"about-video\"&gt;\n  &lt;source src=\"Images/about_sec.mp4\" type=\"video/mp4\"&gt;\n  &lt;!-- fallback image --&gt;\n  &lt;img src=\"Images/about_illustration.png\" alt=\"about illustration\" /&gt;\n&lt;/video&gt;\n\n\n\n\n\n\n\n\n&lt;div style=\"text-align:center\"&gt;&lt;img src=\"Images/1.png\" style=\"height:72px;width:72px;border-radius:50%;background:#fff;padding:6px;\"/&gt;&lt;/div&gt;\n&lt;div class=\"title\"&gt;Data Analytics & Visualization&lt;/div&gt;\n&lt;p&gt;Data wrangling, predictive modeling, dashboards, SHAP explainability, and actionable insights for stakeholders.&lt;/p&gt;\n\n\n&lt;div style=\"text-align:center\"&gt;&lt;img src=\"Images/3.png\" style=\"height:72px;width:72px;border-radius:50%;background:#fff;padding:6px;\"/&gt;&lt;/div&gt;\n&lt;div class=\"title\"&gt;Software & Web Development&lt;/div&gt;\n&lt;p&gt;Full-stack development (React, Node), API integration, responsive UIs, and production deployments.&lt;/p&gt;\n\n\n&lt;div style=\"text-align:center\"&gt;&lt;img src=\"Images/4.png\" style=\"height:72px;width:72px;border-radius:50%;background:#fff;padding:6px;\"/&gt;&lt;/div&gt;\n&lt;div class=\"title\"&gt;Cloud & Infrastructure&lt;/div&gt;\n&lt;p&gt;AWS-based solutions, CI/CD pipelines, containerization, and system performance improvements.&lt;/p&gt;\n\n\n\n\n\n\n\n\n\n\nLeveraged Random Forest and Gradient Boosting models to analyze exoplanet datasets (~75% accuracy). Applied SHAP for model interpretability and scientific insights.\n \nView Code on GitHub\n\n\n\n\nInteractive visualization analyzing content trends, genre distribution, and regional differences over time.\n\nView dashboard on GitHub\n\n\n\n\nTkinter · SQLite · Natural-language parsing · Multithreaded UI A campus chatbot that answers class and campus queries with a responsive interface and optional OpenAI integration.\nView Code on GitHub\n\n\n\n\n\n\n\n\n\nLanguages: Python, R, JavaScript, TypeScript, SQL, Java, PHP\n\n\nWeb: React, Node.js, Angular, HTML5, CSS3, Bootstrap\n\n\nData & Viz: Pandas, NumPy, Matplotlib, Seaborn, Tableau, Power BI, SHAP\n\n\nCloud & Infra: AWS, Docker, Kubernetes, Jenkins, CI/CD\n\n\nTools: Git, GitHub, Jupyter, SQLite, Firebase\n\n\n\n\n\n\n\n\n\nFeel free to reach out — I’m available for internships, full-time roles, and research collaborations.\n\n\n\nEmail: poojasukhdeve06@gmail.com\n\n\nGitHub: poojasukhdeve-project\n\n\nLinkedIn: Pooja Sukhdeve"
   },
   {
     "objectID": "index.html#exoplanet-data-analysis-with-shap",
     "href": "index.html#exoplanet-data-analysis-with-shap",
-    "title": "Services",
+    "title": "Pooja Sukhdeve — Portfolio",
     "section": "",
-    "text": "Leveraged ML models (Random Forest, Gradient Boosting) to analyze exoplanet datasets with 75% accuracy.\nImpact: Used SHAP to identify key features driving exoplanet detection.\n \nView Code on GitHub"
+    "text": "Leveraged Random Forest and Gradient Boosting models to analyze exoplanet datasets (~75% accuracy). Applied SHAP for model interpretability and scientific insights.\n \nView Code on GitHub"
   },
   {
-    "objectID": "index.html#brfss-health-data-analytics",
-    "href": "index.html#brfss-health-data-analytics",
-    "title": "Services",
+    "objectID": "index.html#netflix-content-dashboard-tableau",
+    "href": "index.html#netflix-content-dashboard-tableau",
+    "title": "Pooja Sukhdeve — Portfolio",
     "section": "",
-    "text": "Analyzed BRFSS data to predict disease risk with 84.3% accuracy using SHAP.\nView Code on GitHub"
+    "text": "Interactive visualization analyzing content trends, genre distribution, and regional differences over time.\n\nView dashboard on GitHub"
   },
   {
-    "objectID": "index.html#netflix-data-visualization-dashboard",
-    "href": "index.html#netflix-data-visualization-dashboard",
-    "title": "Services",
+    "objectID": "index.html#chatalogue-university-chatbot",
+    "href": "index.html#chatalogue-university-chatbot",
+    "title": "Pooja Sukhdeve — Portfolio",
     "section": "",
-    "text": "View dashboard on GitHub"
-  },
-  {
-    "objectID": "index.html#visualization-module-for-python-research-project",
-    "href": "index.html#visualization-module-for-python-research-project",
-    "title": "Services",
-    "section": "",
-    "text": "Interactive tool to teach programming to visually impaired learners.\nView Code on GitHub"
+    "text": "Tkinter · SQLite · Natural-language parsing · Multithreaded UI A campus chatbot that answers class and campus queries with a responsive interface and optional OpenAI integration.\nView Code on GitHub"
   },
   {
     "objectID": "contact.html",
