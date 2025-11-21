@@ -14,34 +14,6 @@
     "text": "Leveraged ML models (Random Forest, Gradient Boosting) to analyze exoplanet datasets with 75% accuracy.\nImpact: Used SHAP to identify key features driving exoplanet detection.\n \nView Code on GitHub"
   },
   {
-    "objectID": "index.html#netflix-content-dashboard-tableau",
-    "href": "index.html#netflix-content-dashboard-tableau",
-    "title": "Pooja Sukhdeve — Portfolio",
-    "section": "",
-    "text": "Interactive visualization analyzing content trends, genre distribution, and regional differences over time.\n\nView dashboard on GitHub"
-  },
-  {
-    "objectID": "index.html#chatalogue-university-chatbot",
-    "href": "index.html#chatalogue-university-chatbot",
-    "title": "Pooja Sukhdeve — Portfolio",
-    "section": "",
-    "text": "Tkinter · SQLite · Natural-language parsing · Multithreaded UI A campus chatbot that answers class and campus queries with a responsive interface and optional OpenAI integration.\nView Code on GitHub"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "&lt;h2&gt;Pooja S Sukhdeve&lt;/h2&gt;\n&lt;p&gt;\n  Hi, I’m Pooja, a Computer Science graduate student at Boston University MET, specializing in data science and AI. I’m passionate about analytics, innovative tech, and making a real-world impact through software and research projects.\n&lt;/p&gt;\n&lt;ul&gt;\n  &lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; poojasukhdeve@email.com&lt;/li&gt;\n  &lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=\"https://linkedin.com/in/poojasukhdeve\" target=\"_blank\"&gt;View my profile&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "&lt;h1&gt;Contact Me&lt;/h1&gt;\n&lt;p style=\"margin-bottom: 1.2rem; color:#b2b8c6;\"&gt;I'd love to hear from you! Send a message below and I'll get back to you soon.&lt;/p&gt;\n&lt;!-- Contact Form Start --&gt;\n&lt;form name=\"contact\" method=\"POST\" data-netlify=\"true\" class=\"contact-form\"&gt;\n  &lt;input type=\"text\" name=\"name\" placeholder=\"Your Name\" required&gt;\n  &lt;input type=\"email\" name=\"email\" placeholder=\"Your Email\" required&gt;\n  &lt;textarea name=\"message\" rows=\"3\" placeholder=\"Your Message\" required&gt;&lt;/textarea&gt;\n  &lt;button type=\"submit\"&gt;Send&lt;/button&gt;\n&lt;/form&gt;\n&lt;!-- Contact Form End --&gt;\n&lt;p style=\"font-size: 0.88rem; color:#888; margin-top:1.7rem;\"&gt;\n  Or email me at &lt;a href=\"mailto:poojasukhdeve@email.com\" style=\"color:#4dd7fa;\"&gt;poojasukhdeve@email.com&lt;/a&gt;\n&lt;/p&gt;"
-  },
-  {
     "objectID": "index.html#brfss-health-data-analytics",
     "href": "index.html#brfss-health-data-analytics",
     "title": "Services",
@@ -61,5 +33,19 @@
     "title": "Services",
     "section": "",
     "text": "Interactive tool to teach programming to visually impaired learners.\nView Code on GitHub"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "&lt;h2&gt;Pooja S Sukhdeve&lt;/h2&gt;\n&lt;p&gt;\n  Hi, I’m Pooja, a Computer Science graduate student at Boston University MET, specializing in data science and AI. I’m passionate about analytics, innovative tech, and making a real-world impact through software and research projects.\n&lt;/p&gt;\n&lt;ul&gt;\n  &lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; poojasukhdeve@email.com&lt;/li&gt;\n  &lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=\"https://linkedin.com/in/poojasukhdeve\" target=\"_blank\"&gt;View my profile&lt;/a&gt;&lt;/li&gt;\n&lt;/ul&gt;"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "&lt;h1&gt;Contact Me&lt;/h1&gt;\n&lt;p style=\"margin-bottom: 1.2rem; color:#b2b8c6;\"&gt;I'd love to hear from you! Send a message below and I'll get back to you soon.&lt;/p&gt;\n&lt;!-- Contact Form Start --&gt;\n&lt;form name=\"contact\" method=\"POST\" data-netlify=\"true\" class=\"contact-form\"&gt;\n  &lt;input type=\"text\" name=\"name\" placeholder=\"Your Name\" required&gt;\n  &lt;input type=\"email\" name=\"email\" placeholder=\"Your Email\" required&gt;\n  &lt;textarea name=\"message\" rows=\"3\" placeholder=\"Your Message\" required&gt;&lt;/textarea&gt;\n  &lt;button type=\"submit\"&gt;Send&lt;/button&gt;\n&lt;/form&gt;\n&lt;!-- Contact Form End --&gt;\n&lt;p style=\"font-size: 0.88rem; color:#888; margin-top:1.7rem;\"&gt;\n  Or email me at &lt;a href=\"mailto:poojasukhdeve@email.com\" style=\"color:#4dd7fa;\"&gt;poojasukhdeve@email.com&lt;/a&gt;\n&lt;/p&gt;"
   }
 ]

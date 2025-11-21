@@ -158,7 +158,6 @@ format:
   100% { opacity: 0; }
 }
 
-
 }
 
 /* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
@@ -262,9 +261,7 @@ format:
 
 </style>
 
-
 <div class="site-container">
-
 
 <!-- ======================= ABOUT SECTION ======================= -->
 <div class="section-block" id="about">
@@ -296,10 +293,8 @@ I’m a Computer Science graduate student at Boston University who loves buildin
 
 
 
-
 </div>
 </div>
-
 
 
 <!-- ======================= SERVICES SECTION ======================= -->
@@ -350,7 +345,6 @@ Delivering innovative and cutting-edge applications.
 :::
 :::
 
-
 <!-- ======================= PROJECTS SECTION ======================= -->
 # Selected Projects in Data Analytics & Machine Learning
 
@@ -363,14 +357,12 @@ Leveraged ML models (Random Forest, Gradient Boosting) to analyze exoplanet data
 
 [View Code on GitHub](https://github.com/poojasukhdeve-project/Exoplanet-Data-Visualization-and-Analysis-with-SHAP.git)
 
-
 ---
 
 ## BRFSS Health Data Analytics
 Analyzed BRFSS data to predict disease risk with 84.3% accuracy using SHAP.
 
 [View Code on GitHub](https://github.com/poojasukhdeve-project/BRFSS-Data-Analytics-Exploring-Health-Patterns-and-Risk-Factors-with-R.git)
-
 
 ---
 
@@ -380,7 +372,6 @@ Analyzed BRFSS data to predict disease risk with 84.3% accuracy using SHAP.
 
 [View dashboard on GitHub](https://github.com/poojasukhdeve-project/Netflix-Data-Visualization-Dashboard-using-Tableau.git)
 
-
 ---
 
 ## Space Theme Website Portfolio
@@ -388,13 +379,11 @@ Analyzed BRFSS data to predict disease risk with 84.3% accuracy using SHAP.
 <img src="Images/9.png" class="project-img">
 <img src="Images/10.png" class="project-img">
 
-
 ---
 
 ## Visualization Module for Python (Research Project)
 Interactive tool to teach programming to visually impaired learners.  
 [View Code on GitHub](https://github.com/poojasukhdeve-project/Python-Visualizations-Book-Interactive-Module.git)
-
 
 
 <!-- ======================= SKILLS ======================= -->
@@ -409,7 +398,6 @@ Interactive tool to teach programming to visually impaired learners.
   <li><b>Other Tools:</b> GitHub, Outlook, R Studio, Jupyter, SQLite</li>
 </ul>
 </div>
-
 
 
 <!-- ======================= CONTACT ======================= -->
@@ -430,7 +418,6 @@ Interactive tool to teach programming to visually impaired learners.
 </ul>
 </div>
 
-
 </div> <!-- END SITE CONTAINER -->
 
 <!-- <script>
@@ -449,5 +436,6 @@ document.addEventListener("DOMContentLoaded", function () {
   fadeElements.forEach(el => observer.observe(el));
 });
 </script> -->
+
 
 
