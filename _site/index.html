@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Pooja Sukhdeve — Portfolio – Pooja Sukhdeve</title>
+<title>Pooja Sukhdeve</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,319 +123,418 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Pooja Sukhdeve — Portfolio</h1>
-</div>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta column-page">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<!--
-  Single-file Quarto index (index.qmd)
-  - Includes inline CSS to control full-width layout and the About section grid
-  - Replace image/video paths under Images/ with your actual project assets
--->
 <style>
-/* ---------- FORCE FULL-WIDTH PAGE ---------- */
-main.content {
-  max-width: 100% !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-}
 
-/* Make the site container stretch edge-to-edge */
+/* ---------- MAIN CONTAINER ---------- */
 .site-container {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 auto !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-  box-sizing: border-box;
+    max-width: 100% !important;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
 }
 
-/* ---------- MAIN VISUAL / HERO ---------- */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 2rem;
-  align-items: center;
-  max-width: 1400px;
-  margin: 1.5rem auto 2rem auto;
+/* ---------- SECTION TITLE ---------- */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #1c2541;
 }
 
-.hero .intro {
-  padding-right: 1rem;
+.section-block {
+  margin-bottom: 3rem;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin: 0 0 0.2rem 0;
-  line-height: 1.02;
-}
+/* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
 
-.hero p.lead {
-  font-size: 1.15rem;
-  color: #374151;
-  margin-bottom: 1.25rem;
-}
-
-.hero .ctas {
-  display: flex;
-  gap: 0.8rem;
-  margin-top: 1rem;
-}
-
-.btn-primary {
-  background: #0b69ff;
-  color: white;
-  padding: 0.8rem 1.25rem;
-  border-radius: 999px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-outline {
-  border: 2px solid #0b69ff;
-  color: #0b69ff;
-  padding: 0.7rem 1.2rem;
-  border-radius: 999px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* ---------- ABOUT SECTION (TWO-COLUMN) ---------- */
 .about-container {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 2.5rem;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.4rem;
+}
+
+/* text column */
+.about-text {
+  flex: 1.5;
+  font-size: 1.1rem;
+  color: #24313f;
+  line-height: 1.6;
+}
+
+/* media column (image / gif / video) */
+.about-img {
+  flex: 0 0 auto;        /* fixed column for media */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* image styling: no border/shadow and responsive */
+.about-img img,
+.about-img video {
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto 2rem auto;
+  max-width: 380px;      /* change this to make the media bigger/smaller */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none !important;      /* remove any shadow */
+  border: none !important;          /* remove any border */
+  background: transparent !important;
+  display: block;
+}
+
+/* Optional: ensure videos behave like images */
+.about-img video {
+  display: block;
+  outline: none;
+}
+
+/* Mobile responsive: stack columns + full width media */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-img {
+    width: 100%;
+    justify-content: center;
+  }
+  .about-img img,
+  .about-img video {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 12px;
+  }
+  /* Start invisible */
+.about-fade {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  width: 380px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* When visible on screen */
+.about-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .about-fade {
+    width: 100%;
+  }
+}
+
+/* .about-video {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: none !important;
+  border: none !important;
+} */
+
+ .video-wrapper {
+  position: relative;
+  width: 380px;
+  max-width: 100%;
+}
+
+.about-video {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Text overlay */
+.overlay-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  animation: fadeLoop 4s ease-in-out infinite;
+}
+
+/* Fade-in → visible → fade-out → repeat */
+@keyframes fadeLoop {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+}
+
+/* ---------- ABOUT SECTION (SIDE-BY-SIDE) ---------- */
+
+/*.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .about-text {
-  font-size: 1.05rem;
-  color: #263238;
-  line-height: 1.65;
+  flex: 1.5;
+  font-size: 1.1rem;
 }
 
-.about-img,
-.video-wrapper {
-  width: 100%;
-  justify-self: end;
-}
-
-.about-img img,
-.about-video {
-  max-width: 420px;
-  width: 100%;
+.about-img img {
+  width: 380px;
   height: auto;
-  display: block;
-  border-radius: 10px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 14px #0002;
 }
 
-/* ---------- CARDS / SERVICES ---------- */
+/* Mobile responsive */
+/* @media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-img img {
+    width: 100%;
+  }
+}  */
+
+/* -------------- SERVICES CARDS -------------- */
 .card-group {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.4rem;
   flex-wrap: wrap;
-  max-width: 1400px;
-  margin: 0 auto 2rem auto;
 }
+
 .card {
-  flex: 1 1 260px;
+  flex: 1;
   background: #f6f9fb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px #0001;
+}
+
+/* Projects images */
+.project-img {
+  width: 65%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
   border-radius: 12px;
-  padding: 1.25rem;
-  box-shadow: 0 6px 18px rgba(2,6,23,0.04);
 }
-.card .title { font-weight: 700; margin-top: 0.6rem; text-align:center }
 
-/* ---------- PROJECTS ---------- */
-.project-img { width: 100%; max-width: 900px; display:block; margin: 10px auto; border-radius:10px }
+/* ---------- SKILLS ---------- */
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
 
-/* ---------- SKILLS & CONTACT ---------- */
-.skills-list { list-style: none; padding-left: 0 }
-.skills-list li { margin-bottom: 0.45rem }
-.contact-list { list-style:none; padding-left:0; display:flex; gap:1rem }
+.skills-list li {
+  margin-bottom: 0.4em;
+  padding-left: 1.5em;
+  position: relative;
+  font-size: 1.05rem;
+}
 
-/* ---------- RESPONSIVE ---------- */
+.skills-list li:before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+/* ---------- CONTACT ---------- */
+.contact-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.15rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 @media (max-width: 900px) {
-  .hero, .about-container { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 2.2rem }
-  main.content { padding-left: 12px !important; padding-right: 12px !important; }
+  .contact-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
-
-/* Small page container for the remainder content */
-.page-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 1rem 3rem 1rem }
 
 </style>
 <div class="site-container">
-<!-- HERO -->
-<section class="hero">
-<div class="intro">
-<pre><code>&lt;h1&gt;Hey there — I’m &lt;strong&gt;Pooja Sukhdeve&lt;/strong&gt;&lt;/h1&gt;
-&lt;p class="lead"&gt;Software Developer &amp; Data Engineer — Accessible visualizations · Cloud-native apps · Full-stack solutions&lt;/p&gt;</code></pre>
-<p>
-I build reliable, scalable software that turns data into useful experiences — from AWS-powered cloud systems to interactive Python tools and full-stack web apps. My work focuses on accessibility, clean architecture, and production-ready code that solves real user problems.
-</p>
-<div class="ctas">
-<pre><code>  &lt;a class="btn-primary" href="#projects"&gt;Glance at my work&lt;/a&gt;
-  &lt;a class="btn-outline" href="mailto:poojasukhdeve06@gmail.com"&gt;Contact me&lt;/a&gt;
-&lt;/div&gt;</code></pre>
+<!-- ======================= ABOUT SECTION ======================= -->
+<div id="about" class="section-block">
+<div class="about-container">
+<div class="about-text">
+<p># About Me</p>
+<p>### ** Hi All, I’m Pooja Sukhdeve<strong> </strong>Computer Science Graduate Student . Software Developer · Data Analyst · Web Developer** I’m a Computer Science graduate student at Boston University who loves building clean, scalable, and user-focused software. From cloud-powered applications to full-stack web tools, I enjoy turning complex ideas into fast, functional, and elegant solutions. I work across Python, JavaScript, AWS, and modern frameworks to create systems that are reliable, intuitive, and built with purpose. Above all, I’m passionate about writing code that solves real problems and delivers great experiences for real users.</p>
 </div>
-<div style="justify-self:end">
-<pre><code>&lt;!-- Replace with your image or avatar --&gt;
-&lt;img src="Images/portrait.png" alt="Pooja portrait" style="width:320px;max-width:100%;border-radius:12px;display:block;"&gt;</code></pre>
-</div>
-</div></section>
-<div class="page-inner">
-<!-- ABOUT -->
-<section id="about" class="about-container">
-<section id="about-me" class="level1 about-text">
-<h1>About Me</h1>
-<p><strong>Hi — I’m Pooja Sukhdeve.</strong> I’m a Master of Science in Computer Science candidate at Boston University specializing in software development, cloud computing, and data-driven engineering. I build reliable, scalable, and user-focused applications — from AWS cloud solutions and CI/CD pipelines to full-stack web platforms and accessible Python tools.</p>
-<p>I enjoy turning ideas into well-designed systems through clean architecture, efficient code, and thoughtful design. With experience across front-end, back-end, and data layers, I create end-to-end solutions that integrate APIs, improve performance, and deliver user impact.</p>
-<p>I’m available for internships, full-time roles, and research collaborations.</p>
-</section>
+<!-- <div class="about-img">
+  <img src="Images/about_section.gif"
+       alt="About Me GIF"
+       class="about-fade">
+</div> -->
 <div class="about-img video-wrapper">
-<pre><code>&lt;!-- Example: a short looping mp4 or replace with PNG/JPG --&gt;
-&lt;video autoplay loop muted playsinline class="about-video"&gt;
-  &lt;source src="Images/about_sec.mp4" type="video/mp4"&gt;
-  &lt;!-- fallback image --&gt;
-  &lt;img src="Images/about_illustration.png" alt="about illustration" /&gt;
-&lt;/video&gt;</code></pre>
+<p><video autoplay="" loop="" muted="" playsinline="" class="about-video"> <source src="Images/about_sec.mp4" type="video/mp4"> </video></p>
 </div>
-</section>
-<!-- SERVICES -->
-<section id="services">
+</div>
+</div>
+<!-- ======================= SERVICES SECTION ======================= -->
 <section id="services" class="level1">
 <h1>Services</h1>
 <div class="card-group">
 <div class="card">
-<pre><code>&lt;div style="text-align:center"&gt;&lt;img src="Images/1.png" style="height:72px;width:72px;border-radius:50%;background:#fff;padding:6px;"/&gt;&lt;/div&gt;
-&lt;div class="title"&gt;Data Analytics &amp; Visualization&lt;/div&gt;
-&lt;p&gt;Data wrangling, predictive modeling, dashboards, SHAP explainability, and actionable insights for stakeholders.&lt;/p&gt;</code></pre>
+<p><img src="Images/1.png" class="card-img-top img-fluid" style="height:90px;width:90px;object-fit:cover;border-radius:50%;margin:auto;margin-top:18px;box-shadow:0 2px 12px #0001;display:block;background:#f7f7fa;"></p>
+<div style="text-align:center; font-weight:bold; font-size:1.1rem; margin-top:0.6em;">
+<p>Data Analytics &amp; Visualization</p>
+</div>
+<p>Unlock actionable insights from complex data. - Data wrangling &amp; cleaning<br>
+- Predictive modeling<br>
+- Dashboards &amp; visualization</p>
 </div>
 <div class="card">
-<pre><code>&lt;div style="text-align:center"&gt;&lt;img src="Images/3.png" style="height:72px;width:72px;border-radius:50%;background:#fff;padding:6px;"/&gt;&lt;/div&gt;
-&lt;div class="title"&gt;Software &amp; Web Development&lt;/div&gt;
-&lt;p&gt;Full-stack development (React, Node), API integration, responsive UIs, and production deployments.&lt;/p&gt;</code></pre>
+<p><img src="Images/3.png" class="card-img-top img-fluid" style="height:90px;width:90px;object-fit:cover;border-radius:50%;margin:auto;margin-top:18px;box-shadow:0 2px 12px #0001;display:block;background:#f7f7fa;"></p>
+<div style="text-align:center; font-weight:bold; font-size:1.1rem; margin-top:0.6em;">
+<p>Software &amp; Web Development</p>
+</div>
+<p>Robust web frontend &amp; backend solutions. - Full-stack dev<br>
+- Responsive UI/UX<br>
+- API integration</p>
 </div>
 <div class="card">
-<pre><code>&lt;div style="text-align:center"&gt;&lt;img src="Images/4.png" style="height:72px;width:72px;border-radius:50%;background:#fff;padding:6px;"/&gt;&lt;/div&gt;
-&lt;div class="title"&gt;Cloud &amp; Infrastructure&lt;/div&gt;
-&lt;p&gt;AWS-based solutions, CI/CD pipelines, containerization, and system performance improvements.&lt;/p&gt;</code></pre>
+<p><img src="Images/4.png" class="card-img-top img-fluid" style="height:90px;width:90px;object-fit:cover;border-radius:50%;margin:auto;margin-top:18px;box-shadow:0 2px 12px #0001;display:block;background:#f7f7fa;"></p>
+<div style="text-align:center; font-weight:bold; font-size:1.1rem; margin-top:0.6em;">
+<p>Application Development</p>
+</div>
+<p>Delivering innovative and cutting-edge applications. - Testing &amp; QA<br>
+- Deployment &amp; Maintenance<br>
+- System Architecture</p>
 </div>
 </div>
+<!-- ======================= PROJECTS SECTION ======================= -->
 </section>
-<!-- PROJECTS -->
-<section id="projects">
-</section>
-<section id="selected-projects" class="level1">
-<h1>Selected Projects</h1>
+<section id="selected-projects-in-data-analytics-machine-learning" class="level1">
+<h1>Selected Projects in Data Analytics &amp; Machine Learning</h1>
 <section id="exoplanet-data-analysis-with-shap" class="level2">
 <h2 class="anchored" data-anchor-id="exoplanet-data-analysis-with-shap">Exoplanet Data Analysis with SHAP</h2>
-<p>Leveraged Random Forest and Gradient Boosting models to analyze exoplanet datasets (~75% accuracy). Applied SHAP for model interpretability and scientific insights.</p>
+<p>Leveraged ML models (Random Forest, Gradient Boosting) to analyze exoplanet datasets with 75% accuracy.<br>
+<strong>Impact:</strong> Used SHAP to identify key features driving exoplanet detection.</p>
 <p><img src="Images/7.png" class="project-img"> <img src="Images/8.png" class="project-img"></p>
 <p><a href="https://github.com/poojasukhdeve-project/Exoplanet-Data-Visualization-and-Analysis-with-SHAP.git">View Code on GitHub</a></p>
 <hr>
 </section>
-<section id="netflix-content-dashboard-tableau" class="level2">
-<h2 class="anchored" data-anchor-id="netflix-content-dashboard-tableau">Netflix Content Dashboard (Tableau)</h2>
-<p>Interactive visualization analyzing content trends, genre distribution, and regional differences over time.</p>
+<section id="brfss-health-data-analytics" class="level2">
+<h2 class="anchored" data-anchor-id="brfss-health-data-analytics">BRFSS Health Data Analytics</h2>
+<p>Analyzed BRFSS data to predict disease risk with 84.3% accuracy using SHAP.</p>
+<p><a href="https://github.com/poojasukhdeve-project/BRFSS-Data-Analytics-Exploring-Health-Patterns-and-Risk-Factors-with-R.git">View Code on GitHub</a></p>
+<hr>
+</section>
+<section id="netflix-data-visualization-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="netflix-data-visualization-dashboard">Netflix Data Visualization Dashboard</h2>
 <p><img src="Images/6.png" class="project-img"></p>
 <p><a href="https://github.com/poojasukhdeve-project/Netflix-Data-Visualization-Dashboard-using-Tableau.git">View dashboard on GitHub</a></p>
 <hr>
 </section>
-<section id="chatalogue-university-chatbot" class="level2">
-<h2 class="anchored" data-anchor-id="chatalogue-university-chatbot">Chatalogue — University Chatbot</h2>
-<p>Tkinter · SQLite · Natural-language parsing · Multithreaded UI A campus chatbot that answers class and campus queries with a responsive interface and optional OpenAI integration.</p>
-<p><a href="https://github.com/poojasukhdeve-project/Python-Visualizations-Book-Interactive-Module.git">View Code on GitHub</a></p>
+<section id="space-theme-website-portfolio" class="level2">
+<h2 class="anchored" data-anchor-id="space-theme-website-portfolio">Space Theme Website Portfolio</h2>
+<p><img src="Images/9.png" class="project-img"> <img src="Images/10.png" class="project-img"></p>
+<hr>
 </section>
-<!-- SKILLS -->
-<section id="skills">
+<section id="visualization-module-for-python-research-project" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-module-for-python-research-project">Visualization Module for Python (Research Project)</h2>
+<p>Interactive tool to teach programming to visually impaired learners.<br>
+<a href="https://github.com/poojasukhdeve-project/Python-Visualizations-Book-Interactive-Module.git">View Code on GitHub</a></p>
+<!-- ======================= SKILLS ======================= -->
 </section>
 </section>
 <section id="technical-skills" class="level1">
 <h1>Technical Skills</h1>
+<div id="skills" class="section-block">
 <ul class="skills-list">
 <li>
-<strong>Languages:</strong> Python, R, JavaScript, TypeScript, SQL, Java, PHP
+<b>Programming Languages:</b> Python, R, SQL, JavaScript, TypeScript, HTML5, CSS, Java, PHP
 </li>
 <li>
-<strong>Web:</strong> React, Node.js, Angular, HTML5, CSS3, Bootstrap
+<b>Web Development:</b> Node.js, React, Angular, jQuery, Bootstrap, API Integration, Git
 </li>
 <li>
-<strong>Data &amp; Viz:</strong> Pandas, NumPy, Matplotlib, Seaborn, Tableau, Power BI, SHAP
+<b>Data Visualization:</b> Tableau, Power BI, Matplotlib, Seaborn, Pandas, NumPy, SHAP, Excel
 </li>
 <li>
-<strong>Cloud &amp; Infra:</strong> AWS, Docker, Kubernetes, Jenkins, CI/CD
+<b>Data Engineering:</b> OpenCV, Spark Apache, AWS
 </li>
 <li>
-<strong>Tools:</strong> Git, GitHub, Jupyter, SQLite, Firebase
+<b>Other Tools:</b> GitHub, Outlook, R Studio, Jupyter, SQLite
 </li>
 </ul>
+</div>
+<!-- ======================= CONTACT ======================= -->
 </section>
-<!-- CONTACT -->
-<section id="contact">
-</section>
-<section id="contact" class="level1">
-<h1>Contact</h1>
+<section id="contact-me" class="level1">
+<h1>Contact Me</h1>
+<div id="contact" class="section-block">
 <p>
-Feel free to reach out — I’m available for internships, full-time roles, and research collaborations.
+Feel free to reach out or connect on social media!
 </p>
 <ul class="contact-list">
 <li>
-<strong>Email:</strong> <a href="mailto:poojasukhdeve06@gmail.com">poojasukhdeve06@gmail.com</a>
+<img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2709.svg" style="height:1.3em;"><br>
+<a href="mailto:poojasukhdeve06@gmail.com">poojasukhdeve06@gmail.com</a>
 </li>
 <li>
-<strong>GitHub:</strong> <a href="https://github.com/poojasukhdeve-project" target="_blank">poojasukhdeve-project</a>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="height:1.3em;"><br>
+<a href="https://github.com/poojasukhdeve-project" target="_blank">GitHub</a>
 </li>
 <li>
-<strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pooja-sukhdeve-79b897194/" target="_blank">Pooja Sukhdeve</a>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="height:1.3em;"><br>
+<a href="https://www.linkedin.com/in/pooja-sukhdeve-79b897194/" target="_blank">LinkedIn</a>
 </li>
 </ul>
-</section>
+</div>
 </section>
 </div>
-<p><!-- end page-inner --></p>
-</div>
-<!-- end site-container -->
-<!-- Optional JS: intersection observer for fade-in (uncomment if you include .about-fade elements) -->
-<!--
-<script>
+<p><!-- END SITE CONTAINER --></p>
+<!-- <script>
 document.addEventListener("DOMContentLoaded", function () {
+  
   const fadeElements = document.querySelectorAll(".about-fade");
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("show");
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
     });
   }, { threshold: 0.2 });
+
   fadeElements.forEach(el => observer.observe(el));
 });
-</script>
--->
+</script> -->
 
 
-</main></div>
 
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -836,7 +935,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   </script>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 
