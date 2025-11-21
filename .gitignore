@@ -2,3 +2,5 @@ pip/.quarto/
 .venv/*
 
 /.quarto/
+
+**/*.quarto_ipynb
